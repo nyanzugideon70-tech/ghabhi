@@ -1,0 +1,221 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#F8FAFC;
+    color:#1E293B;
+}
+
+/* Header */
+header{
+    background:#0F172A;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.logo img{
+    width:60px;
+}
+
+.brand{
+    color:#fff;
+}
+
+.brand h2{
+    color:#F59E0B;
+}
+
+#menu-toggle{
+    display:none;
+}
+
+.menu-btn{
+    display:none;
+    color:#fff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+}
+
+nav a:hover,
+nav a.active{
+    color:#F59E0B;
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(135deg,#0EA5A4,#0F172A);
+    color:#fff;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+/* Contact Grid */
+.contact-grid{
+    width:90%;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.info,
+.contact-form{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.info p{
+    margin:18px 0;
+}
+
+.info i{
+    color:#0EA5A4;
+    margin-right:10px;
+}
+
+/* Social Icons */
+.socials{
+    margin-top:30px;
+}
+
+.socials a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:48px;
+    height:48px;
+    background:#0EA5A4;
+    color:#fff;
+    border-radius:50%;
+    text-decoration:none;
+    margin-right:10px;
+    transition:.3s;
+    font-size:20px;
+}
+
+.socials a:hover{
+    background:#F59E0B;
+    color:#0F172A;
+    transform:translateY(-5px);
+}
+
+/* Form */
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    margin-top:20px;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    background:#0EA5A4;
+    color:#fff;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#F59E0B;
+    color:#0F172A;
+}
+
+/* Map */
+.map{
+    width:90%;
+    margin:40px auto;
+    text-align:center;
+}
+
+.map-box{
+    background:#fff;
+    padding:60px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+/* Footer */
+footer{
+    background:#0F172A;
+    color:#fff;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        width:100%;
+    }
+
+    #menu-toggle:checked ~ nav{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        padding-top:20px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+}
